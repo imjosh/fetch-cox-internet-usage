@@ -70,7 +70,7 @@ async function scrape(cookieJar) {
     const daysLeft = /"dumDaysLeft": "(\d*)"/.exec(body)[1]
     const limit = /"dumLimit": "(\d*)"/.exec(body)[1]
     const usage = /"dumUsage": "(\d*)"/.exec(body)[1]
-    const utilization = /"dumUtilization": "(\d*)"/.exec(body)[1]
+    const utilization = /"dumUtilization": "(<?\d*)"/.exec(body)[1]
 
     return {
       daysLeft,
